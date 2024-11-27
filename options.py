@@ -1,0 +1,19 @@
+gpu = '0'
+random_seed = 0
+data_type = 'unseen'
+video_path = 'data/scenes_lip_pre'  # 抽出した唇領域画像が保存されているディレクトリ
+train_list = f'data/{data_type}_train.txt'
+val_list = f'data/{data_type}_val.txt'
+anno_path = 'data/scenes_list_pre'
+vid_padding = 75 #75
+txt_padding = 40
+batch_size = 32 #96
+base_lr = 2e-6
+num_workers = 2 #16
+max_epoch = 5 # 10000
+display = 1 #10
+test_step = 1000 #1000
+save_prefix = f'weights/LipNet_{data_type}'
+is_optimize = True
+
+weights = 'weights/LipNet_unseen_test8_only_train_without_blank_len_3.pt'
